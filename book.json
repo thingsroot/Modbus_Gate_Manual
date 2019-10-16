@@ -7,7 +7,8 @@
         "search-pro",
         "tbfed-pagefooter",
         "-sharing",
-        "sharing-plus"
+        "sharing-plus",
+        "pageview-count"
     ],
     "pluginsConfig": {
         "hide-element": {
@@ -21,10 +22,10 @@
         "sharing": {
             "facebook": false,
             "google": false,
-            "pocket": true,
+            "pocket": false,
             "qq": true,
             "qzone": true,
-            "twitter": true,
+            "twitter": false,
             "weibo": true,
             "all": [
                 "facebook",
