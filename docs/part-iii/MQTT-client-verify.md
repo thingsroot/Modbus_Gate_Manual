@@ -5,10 +5,10 @@
 
 | TOPIC                       | 说明                       |
 | :-------------------------- | :------------------------- |
-| /\<gateway_sn\>/devices       | 设备列表上送（未压缩)      |
-| /\<gateway_sn\>/data          | 单个设备数据上送（未压缩)  |
-| /\<gateway_sn\>/output        | 设备数据下置(网关订阅主题) |
-| /\<gateway_sn\>/result/output | 设备数据下置结果反馈       |
+| /{gateway_sn}/devices       | 设备列表上送（未压缩)      |
+| /{gateway_sn}/data          | 单个设备数据上送（未压缩)  |
+| /{gateway_sn}/output        | 设备数据下置(网关订阅主题) |
+| /{gateway_sn}/result/output | 设备数据下置结果反馈       |
 
 
 ### 安装MQTT客户端
