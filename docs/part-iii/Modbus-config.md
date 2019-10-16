@@ -1,9 +1,9 @@
 ## Modbus采集配置
 
-Modbus云网关中的Modbus采集功能是遵循Modbus标准协议开发的一个 FreeIOE 通用应用，可以和任何遵循Modbus协议（包含Modbus RTU、Modbus ASCII、Modbus TCP）标准的设备或软件通讯交互，读写这些设备或软件的数据。支持串口、TCP套接字方式。
-Modbus Master应用在Modbus RTU/Modbus ASCII协议中扮演主站的角色，主动向Modbus从站（设备）发起询问指令，请求设备返回符合请求的数据。
-Modbus Master应用在Modbus TCP协议中扮演TCP Client的角色，主动连接Modbus Server（设备）并发起询问指令，请求设备返回符合请求的数据。
-使用Modbus Master应用和Modbus设备通讯时，需要清楚的知道Modbus设备的Modbus协议地址，设备变量的功能码以及寄存器协议地址。Modbus Master应用中使用的寄存器地址是寄存器协议地址(十进制)，这和寄存器PLC地址不太一样，下图是寄存器协议地址和寄存器PLC地址的映射关系。
+Modbus云网关中的Modbus采集功能是遵循Modbus标准协议开发的一个 FreeIOE 通用应用，可以和任何遵循Modbus协议（包含Modbus RTU、Modbus ASCII、Modbus TCP）标准的设备或软件通讯交互，读写这些设备或软件的数据。支持串口、TCP套接字方式。<br/>
+Modbus Master应用在Modbus RTU/Modbus ASCII协议中扮演主站的角色，主动向Modbus从站（设备）发起询问指令，请求设备返回符合请求的数据。<br/>
+Modbus Master应用在Modbus TCP协议中扮演TCP Client的角色，主动连接Modbus Server（设备）并发起询问指令，请求设备返回符合请求的数据。<br/>
+使用Modbus Master应用和Modbus设备通讯时，需要清楚的知道Modbus设备的Modbus协议地址，设备变量的功能码以及寄存器协议地址。Modbus Master应用中使用的寄存器地址是寄存器协议地址(十进制)，这和寄存器PLC地址不太一样，下图是寄存器协议地址和寄存器PLC地址的映射关系。<br/>
 ![](imgs/2019-10-11-18-23-55.png)
 
 ### 通讯协议
@@ -51,11 +51,11 @@ PROP——设备中属性点定义，包含寄存器地址，读取方式等等
 | 描述                             | 属性等的描述                                                 |
 | 型号                             | 属性等的单位                                                 |
 | 读写权限                         | RO-只读，WO-只写，RW-读写                                    |
-| 解析数据类型                     | 对Modbus返回数据进行解码时的数据类型可用:<br> [bit,int8,uint8,int16,uint16,int32,int32_r,uint,uint32_r,float,float_r,double,double_r,string] <br> 其中int32_r uint32_r float_r double_r表示使用内存数据是反向排序（排序单位是两个字节)， <br>例如: int32的值为A1B2C3D4 int32_r的值为D4C3B2A1 |
+| 解析数据类型                     | 对Modbus返回数据进行解码时的数据类型可用:<br/> [bit,int8,uint8,int16,uint16,int32,int32_r,uint,uint32_r,float,float_r,double,double_r,string] <br/> 其中int32_r uint32_r float_r double_r表示使用内存数据是反向排序（排序单位是两个字节)， <br/>例如: int32的值为A1B2C3D4 int32_r的值为D4C3B2A1 |
 | 数值类型                         | 设备属性点数值类型，FreeIOE支持的类型有int, float, string三种类型 |
 | 功能码                           | Modbus读取指令码的十进制，支持01, 02, 03, 04。 01, 02功能码的data_type只能是bit |
 | 运算系数                         | 将获取的modbus数据按照数据类型(data_type)进行解析后，乘以rate作为属性数据。缺省为1 |
-| 数据位偏移[从0开始]              | 在03, 04功能码读取寄存器时，可以指定offset. （01, 02不支持指定offset操作) ，<br> 在解析数据类型为bit的时候offset是指位偏移数，解析数据类型为int8,uint8类型时是指字节偏移数（0或者1）。 |
+| 数据位偏移[从0开始]              | 在03, 04功能码读取寄存器时，可以指定offset. （01, 02不支持指定offset操作) ，<br/> 在解析数据类型为bit的时候offset是指位偏移数，解析数据类型为int8,uint8类型时是指字节偏移数（0或者1）。 |
 | 写功能码[可不填]                 | 指定写操作的功能码，默认情况下，与功能码的对应关系如下: 01 → 05，03 → 06 |
 | 字符长度[数据类型为string时有效] | 当按照裸字符串进行读写(data_type 为 string或raw)时，需要指定此长度。 |
 
