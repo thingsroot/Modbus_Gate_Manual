@@ -19,7 +19,6 @@
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "sharing": {
-            "wechat": true,
             "facebook": false,
             "google": false,
             "pocket": true,
@@ -28,7 +27,6 @@
             "twitter": true,
             "weibo": true,
             "all": [
-                "wechat",
                 "facebook",
                 "google",
                 "instapaper",
