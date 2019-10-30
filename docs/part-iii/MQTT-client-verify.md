@@ -64,7 +64,8 @@
 发布的内容必须是JSON字符串，其中：
 
     id——为消息发布时附带的追踪标识，UUID即可，这里为了方便识别，自定义了一个字符串。
-    data——为JSON字符串，其中device为设备序号；output为变量名称；<br> prop为变量属性，一般都是value；value是数值，如是字符串类型，用双引号包含。
+    data——为JSON字符串，其中device为设备序号；output为变量名称；
+          prop为变量属性，一般都是value；value是数值，如是字符串类型，用双引号包含。
 
 
 发布消息时可以订阅主题 {gateway_sn}/result/output 来获取应用执行返回值。
