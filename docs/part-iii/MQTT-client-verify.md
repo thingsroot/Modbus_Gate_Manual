@@ -1,6 +1,6 @@
 ## 使用MQTT客户端验证数据
 
-验证之前，需要认证阅读[MQTT转发协议](https://github.com/thingsroot/mqtt_standard/blob/master/%E8%AE%BE%E5%A4%87.md)。这里注意是简单测试，测试如下几个主题即可。测试之前，MQTT配置中勾选高级选项中的禁止压缩（调试使用）。
+验证之前，需要认真阅读[MQTT转发协议](https://github.com/thingsroot/mqtt_standard/blob/master/%E8%AE%BE%E5%A4%87.md)。这里注意是简单测试，测试如下几个主题即可。测试之前，MQTT配置中勾选高级选项中的禁止压缩（调试使用）。
 ![](imgs/2019-10-15-19-15-49.png)
 
 | TOPIC                       | 说明                       |
