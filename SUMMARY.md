@@ -1,12 +1,12 @@
 <!-- toc -->
 
-* 概述
+### 概述
 
   * [产品简介&主要特性](README.md)
 
 
 
-* 网关安装连接
+### 网关安装连接
   * [网关安装&接线](docs/part-ii/Gate-installation.md)
 
   * [网关默认配置&指示灯说明](docs/part-ii/Gate-indicator-light.md)
@@ -16,7 +16,7 @@
 
 
 
-* 平台登录及应用配置
+### 平台登录及应用配置
 
   * [平台注册及登录](docs/part-iii/Cloud-register-login.md)
 
@@ -39,7 +39,7 @@
 
 
 
-* FAQ
+### FAQ
 
   * [常见问题](docs/part-faq/FAQ.md)
 
