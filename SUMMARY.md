@@ -1,12 +1,7 @@
+<!-- toc -->
 * 概述
 
   * [产品简介&主要特性](README.md)
-
-
-
-
-
-<!-- * [开箱说明](docs/part-ii/Gate-unpack.md) -->
 
 * 网关安装连接
   * [网关安装&接线](docs/part-ii/Gate-installation.md)
